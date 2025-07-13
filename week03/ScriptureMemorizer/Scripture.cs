@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 public class Scripture
 {
     private Reference _reference;
