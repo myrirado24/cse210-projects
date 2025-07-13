@@ -34,7 +34,6 @@ class Program
                 currentScripture.HideRandomWords(random.Next(3, 6));
             }
         }
-
         Console.Clear();
         Console.WriteLine(currentScripture.GetDisplayText());
         Console.WriteLine("\nProgram ended. Good luck with your memorization!");

@@ -8,17 +8,16 @@ public class Scripture
     {
         _reference = reference;
         _words = new List<Word>();
-        string[] rawWords = Regex.Split(text, @"(\s+)");
+        string[] rawWords = Regex.Split(text, @"\s+");
 
         foreach (string rawWord in rawWords)
         {
-            if (!string.IsNullOrWhiteSpace(rawWord))
+            if (!string.IsNullOrEmpty(rawWord))
             {
                 _words.Add(new Word(rawWord));
             }
         }
     }
-
     public void HideRandomWords(int count)
     {
         Random random = new Random();
@@ -38,7 +37,7 @@ public class Scripture
     }
     public string GetDisplayText()
     {
-        string scriptureText = string.Join("", _words.Select(word => word.GetDisplayText()));
+        string scriptureText = string.Join(" ", _words.Select(word => word.GetDisplayText()));
         return $"{_reference.GetDisplayText()} {scriptureText}";
     }
 }

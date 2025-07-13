@@ -11,7 +11,6 @@ public class Reference
         _startVerse = verse;
         _endVerse = null;
     }
-
     public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         _book = book;
@@ -19,7 +18,6 @@ public class Reference
         _startVerse = startVerse;
         _endVerse = endVerse;
     }
-
     public string GetDisplayText()
     {
         if (_endVerse.HasValue)
